@@ -2,7 +2,7 @@ Register-ArgumentCompleter -CommandName kubectl -Native -ScriptBlock {
     param($wordToComplete, $commandAst)
     
     # kubectl <wordToComplete>
-    if ($commandAst -notmatch "^kubectl\s*$wordToComplete$") 
+    if ($commandAst -notmatch "^kubectl(.exe)?\s*$wordToComplete$")
     {
         return
     } 
